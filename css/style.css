@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 5vh;
+}
+
+.AppBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+#generate {
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.8s all;
+}
+
+#generate:hover {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    transition: 0.8s all;
+}
+
+.quote {
+    margin-top: 5vh;
+    width: 70vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+
+/* class to show full quote */
+.quote-more {
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+
+#author {
+    margin-top: 5vh;
+}
+
+.details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    margin-top: 5vh;
+}
+
+.details-col {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+#image {
+    width: 30vh;
+    height: 35vh;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(100%);
+}
+
+#brief {
+    max-height: 30vh;
+}
+
+.show-more {
+    display: none;
+}
+
+#bio {
+    width: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+
+    .AppBody {
+        height: auto;
+    }
+
+    #generate {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .quote {
+        width: 85vw;
+        font-size: 1.7rem;
+    }
+
+    #author {
+        font-size: 1.2rem;
+        margin-top: 2vh;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .details-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    #bio {
+        width: 50vw;
+    }
+
+    #brief {
+        max-height: max-content;
+    }
+
+}
